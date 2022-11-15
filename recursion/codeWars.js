@@ -58,3 +58,12 @@ const productOfArray = (arr) => {
 };
 
 console.log(`product Of Array [1,2,3,10] = ${productOfArray([1, 2, 3, 10])}`);
+
+// https://www.codingame.com/
+/*
+The function should return an array containing repetitions of the number argument. For instance, replicate(3, 5) should return [5,5,5]. If the times argument is negative, return an empty array.
+*/
+const replicate = (times, num) => {
+  return times <= 0 ? [] : [num].concat(replicate(--times, num));
+};
+console.log(replicate(3, 5));
